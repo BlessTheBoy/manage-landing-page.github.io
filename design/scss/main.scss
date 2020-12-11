@@ -64,8 +64,38 @@ $VaryLightGray: hsl(0, 0%, 98%);
   }
   .hero {
     @include container();
+    padding-top: 2.5rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    &__image {
+      flex: 0.4;
+      object-fit: contain;
+      max-width: 550px;
+    }
+    &__text {
+      margin-right: 5rem;
+      h1 {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 1.1;
+        color: $VeryDarkBlue;
+      }
+      p {
+        font-size: 0.9rem;
+        margin: 2rem 0;
+        padding-right: 9rem;
+        color: $DarkGrayishBlue;
+      }
+      button {
+        @include button-style();
+        padding: 0.65rem 2rem;
+      }
+    }
   }
 }

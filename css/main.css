@@ -60,8 +60,51 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 3rem;
+  padding-top: 2.5rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top .hero__image {
+  flex: 0.4;
+  object-fit: contain;
+  max-width: 550px;
+}
+
+.top .hero__text {
+  margin-right: 5rem;
+}
+
+.top .hero__text h1 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #1d1e25;
+}
+
+.top .hero__text p {
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  padding-right: 9rem;
+  color: #9095a7;
+}
+
+.top .hero__text button {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  background-color: #f25f3a;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
+  padding: 0.65rem 2rem;
 }
 /*# sourceMappingURL=main.css.map */
