@@ -1,0 +1,71 @@
+@import "config";
+
+$BrightRed: rgb(242, 95, 58);
+$DarkBlue: hsl(228, 39%, 23%);
+
+$DarkGrayishBlue: hsl(227, 12%, 61%);
+$VeryDarkBlue: hsl(233, 12%, 13%);
+$VeryPaleRed: hsl(13, 100%, 96%);
+$VaryLightGray: hsl(0, 0%, 98%);
+
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+}
+@mixin transition-ease($time) {
+  transition: all ease-in-out $time;
+}
+@mixin button-style {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  background-color: $BrightRed;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
+  -moz-box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
+  box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
+}
+
+.top {
+  .header {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 3.5rem 1rem;
+
+    &__nav {
+      ul {
+        display: flex;
+
+        li {
+          margin: 0 0.75rem;
+          font-size: 0.7rem;
+          font-weight: 700;
+          cursor: pointer;
+          padding: 0.2rem;
+          @include transition-ease(0.2s);
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    &__btn {
+      @include button-style();
+    }
+  }
+  .hero {
+    @include container();
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

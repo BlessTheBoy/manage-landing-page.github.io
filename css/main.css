@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+ul {
+  list-style: none;
+}
+
+.top .header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 3.5rem 1rem;
+}
+
+.top .header__nav ul {
+  display: flex;
+}
+
+.top .header__nav ul li {
+  margin: 0 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: all ease-in-out 0.2s;
+}
+
+.top .header__nav ul li:hover {
+  opacity: 0.5;
+}
+
+.top .header__btn {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  background-color: #f25f3a;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
+}
+
+.top .hero {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */
