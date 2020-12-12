@@ -524,12 +524,16 @@ ul {
     margin: 0.8rem 0 1.2rem;
   }
   .bottom .features {
-    padding-top: 0.5rem;
+    padding: 0.5rem 1.5rem 2rem;
     flex-direction: column;
     text-align: center;
   }
   .bottom .features__intro {
     margin-right: 0;
+  }
+  .bottom .features__intro h2 {
+    font-size: 1.7rem;
+    padding: 0 1rem;
   }
   .bottom .features__intro p {
     width: 100%;

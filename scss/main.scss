@@ -468,16 +468,22 @@ $VaryLightGray: hsl(0, 0%, 98%);
   }
   .bottom {
     .features {
-      padding-top: 0.5rem;
+      padding: 0.5rem 1.5rem 2rem;
       flex-direction: column;
       text-align: center;
 
       &__intro {
         margin-right: 0;
+        h2 {
+          font-size: 1.7rem;
+          padding: 0 1rem;
+        }
         p {
           width: 100%;
           padding: 0 1rem;
         }
+      }
+      &__list {
       }
     }
   }
