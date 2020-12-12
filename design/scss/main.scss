@@ -32,6 +32,36 @@ $VaryLightGray: hsl(0, 0%, 98%);
   box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
 }
 
+@keyframes slideshow {
+  0% {
+    transform: translateX(0px);
+  }
+  2% {
+    transform: translateX(-510px);
+  }
+  25% {
+    transform: translateX(-510px);
+  }
+  27% {
+    transform: translateX(-1020px);
+  }
+  50% {
+    transform: translateX(-1020px);
+  }
+  52% {
+    transform: translateX(-1530px);
+  }
+  75% {
+    transform: translateX(-1530px);
+  }
+  77% {
+    transform: translateX(-2040px);
+  }
+  100% {
+    transform: translateX(-2040px);
+  }
+}
+
 .top {
   .header {
     @include container();
@@ -89,13 +119,119 @@ $VaryLightGray: hsl(0, 0%, 98%);
       p {
         font-size: 0.9rem;
         margin: 2rem 0;
-        padding-right: 9rem;
+        width: 70%;
+        margin-right: auto;
         color: $DarkGrayishBlue;
       }
       button {
         @include button-style();
         padding: 0.65rem 2rem;
       }
+    }
+  }
+}
+.bottom {
+  .features {
+    @include container();
+    display: flex;
+    padding-top: 5rem;
+
+    &__intro {
+      margin-right: 5rem;
+      h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.1;
+        color: $VeryDarkBlue;
+      }
+      p {
+        font-size: 0.8rem;
+        margin: 1.6rem 0;
+        // padding-right: 11rem;
+        width: 75%;
+        margin-right: auto;
+        color: $DarkGrayishBlue;
+      }
+    }
+    &__list {
+      .feature {
+        margin-bottom: 3rem;
+        padding-right: 2rem;
+        &__header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.6rem;
+          span {
+            @include button-style();
+            box-shadow: none;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.75rem;
+            width: 52px;
+            height: 33px;
+            margin-right: 1.2rem;
+          }
+        }
+        p {
+          padding-left: calc(52px + 1.2rem);
+          font-size: 0.8rem;
+          color: $DarkGrayishBlue;
+        }
+      }
+    }
+  }
+  .testimonials {
+    text-align: center;
+    width: 100%;
+    padding: 4rem 0 2rem;
+    overflow: hidden;
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+      color: $VeryDarkBlue;
+    }
+    &__slider {
+      display: flex;
+      // overflow-x: auto;
+      align-items: flex-start;
+      padding: 2.5rem 0;
+      margin: 3rem 0;
+      transform: translate3d(0, 0, 0);
+      animation: slideshow 15s linear infinite;
+
+      .card {
+        margin-right: 20px;
+        background-color: $VaryLightGray;
+        padding: 3rem 2rem 1.5rem;
+        position: relative;
+        min-width: 490px;
+
+        img {
+          position: absolute;
+          object-fit: contain;
+          width: 55px;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        h4 {
+          font-size: 0.8rem;
+          color: $VeryDarkBlue;
+          margin-bottom: 1.2rem;
+          font-weight: 700;
+        }
+        P {
+          font-size: 0.8rem;
+          color: $DarkGrayishBlue;
+        }
+      }
+      #card2 {
+        // justify-self: center;
+        align-self: flex-end;
+      }
+    }
+    button {
+      @include button-style();
     }
   }
 }
