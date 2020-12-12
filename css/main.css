@@ -44,6 +44,10 @@ ul {
   }
 }
 
+.mobile {
+  display: none;
+}
+
 .top .header {
   width: 100%;
   max-width: 1200px;
@@ -53,6 +57,10 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 3.5rem 1rem;
+}
+
+.top .header__logo {
+  z-index: 3;
 }
 
 .top .header__nav ul {
@@ -92,6 +100,7 @@ ul {
   padding: 1rem 3rem;
   padding-top: 2.5rem;
   width: 100%;
+  padding-left: 4rem;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -104,6 +113,8 @@ ul {
   flex: 0.4;
   object-fit: contain;
   max-width: 550px;
+  width: 500px;
+  position: relative;
 }
 
 .top .hero__text {
@@ -429,5 +440,100 @@ ul {
 
 .footer .attribution p a svg:hover {
   fill: #f25f3a;
+}
+
+@media screen and (max-width: 1000px) {
+  .top .hero__image {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: initial;
+  }
+  .top {
+    padding-bottom: 3rem;
+  }
+  .top .header {
+    padding: 1.5rem;
+  }
+  .top .header__logo {
+    width: 100px;
+  }
+  .top .header .navBtn {
+    z-index: 3;
+    position: relative;
+  }
+  .top .header .navBtn .close {
+    display: none;
+  }
+  .top .header__nav {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5rem;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(29, 30, 37, 0.7));
+    z-index: 2;
+  }
+  .top .header__nav ul {
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    text-align: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  .top .header__nav ul li {
+    font-size: 0.75rem;
+    padding: 0.2rem;
+    margin: 0 auto 0.8rem;
+    width: fit-content;
+  }
+  .top .hero {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .top .hero__image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  .top .hero__text {
+    margin: 0;
+    padding: 0;
+  }
+  .top .hero__text h1 {
+    font-size: 2.2rem;
+  }
+  .top .hero__text p {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 0.8rem 0 1.2rem;
+  }
+  .bottom .features {
+    padding-top: 0.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottom .features__intro {
+    margin-right: 0;
+  }
+  .bottom .features__intro p {
+    width: 100%;
+    padding: 0 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
