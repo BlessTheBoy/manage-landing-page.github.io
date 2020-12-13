@@ -61,6 +61,35 @@ $VaryLightGray: hsl(0, 0%, 98%);
     transform: translateX(-2040px);
   }
 }
+@keyframes slideshowMobile {
+  0% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(-95vw);
+  }
+  25% {
+    transform: translateX(-95vw);
+  }
+  27% {
+    transform: translateX(-190vw);
+  }
+  50% {
+    transform: translateX(-190vw);
+  }
+  52% {
+    transform: translateX(-285vw);
+  }
+  75% {
+    transform: translateX(-285vw);
+  }
+  77% {
+    transform: translateX(-380vw);
+  }
+  100% {
+    transform: translateX(-380vw);
+  }
+}
 
 .mobile {
   display: none;
@@ -474,6 +503,7 @@ $VaryLightGray: hsl(0, 0%, 98%);
 
       &__intro {
         margin-right: 0;
+        margin-bottom: 1.8rem;
         h2 {
           font-size: 1.7rem;
           padding: 0 1rem;
@@ -484,6 +514,42 @@ $VaryLightGray: hsl(0, 0%, 98%);
         }
       }
       &__list {
+        .feature {
+          padding: 0;
+          margin-bottom: 2rem;
+          &__header {
+            margin-right: -24px;
+            background-color: $VeryPaleRed;
+
+            h3 {
+              font-size: 0.9rem;
+              font-weight: 700;
+            }
+          }
+
+          p {
+            padding: 0;
+            text-align: left;
+          }
+        }
+      }
+    }
+    .testimonials {
+      padding-top: 2rem;
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+      &__slider {
+        animation: slideshowMobile 15s linear infinite;
+        // animation: none;
+        // margin-left: calc((100vw - 1530px) / 2);
+        margin-left: 0;
+        transform: translateX(-5vw);
+        .card {
+          width: 90% !important;
+          margin: 0 5%;
+          min-width: 90%;
+        }
       }
     }
   }
