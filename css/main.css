@@ -568,6 +568,7 @@ ul {
   }
   .top .header {
     padding: 1.5rem;
+    height: 70px;
   }
   .top .header__logo {
     width: 100px;
@@ -576,11 +577,15 @@ ul {
     z-index: 3;
     position: relative;
   }
+  .top .header .navBtn img {
+    cursor: pointer;
+  }
   .top .header .navBtn .close {
     display: none;
   }
   .top .header__nav {
-    display: none;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
     position: absolute;
     top: 0%;
     left: 0;
@@ -589,6 +594,13 @@ ul {
     padding-top: 5rem;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(29, 30, 37, 0.7));
     z-index: 2;
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  .top .header__nav.open {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
   }
   .top .header__nav ul {
     width: 80%;

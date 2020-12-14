@@ -46,3 +46,22 @@ function showSlides(n) {
 }
 
 function automaticSlide() {}
+
+const openBtn = document.querySelector("#open");
+const closeBtn = document.querySelector("#close");
+const navBar = document.querySelector("#nav");
+
+openBtn.addEventListener("click", openNav);
+function openNav() {
+  openBtn.style.display = "none";
+  closeBtn.style.display = "block";
+
+  navBar.className = "header__nav open";
+}
+closeBtn.addEventListener("click", closeNav);
+function closeNav() {
+  openBtn.style.display = "block";
+  closeBtn.style.display = "none";
+
+  navBar.className = "header__nav close";
+}

@@ -508,18 +508,25 @@ $animationDuration: 0.5s;
     }
     .header {
       padding: 1.5rem;
+      height: 70px;
       &__logo {
         width: 100px;
       }
       .navBtn {
         z-index: 3;
         position: relative;
+        img {
+          cursor: pointer;
+        }
         .close {
           display: none;
         }
       }
       &__nav {
-        display: none;
+        // display: none;
+        visibility: hidden;
+        // opacity: 0.4;
+        transition: all 0.5s ease-in-out;
         position: absolute;
         top: 0%;
         left: 0;
@@ -532,6 +539,14 @@ $animationDuration: 0.5s;
           rgba(29, 30, 37, 0.7)
         );
         z-index: 2;
+        transform: translateY(-40%);
+        opacity: 0;
+
+        &.open {
+          visibility: visible;
+          transform: translateY(0);
+          opacity: 1;
+        }
 
         ul {
           width: 80%;

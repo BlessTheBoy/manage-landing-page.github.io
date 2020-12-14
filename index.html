@@ -35,10 +35,22 @@
       <header class="header">
         <img src="images/logo.svg" alt="" class="header__logo logo" />
         <div class="navBtn mobile">
-          <img src="images/icon-hamburger.svg" alt="" class="hamburger" />
-          <img src="images/icon-close.svg" alt="" class="close" />
+          <img
+            src="images/icon-hamburger.svg"
+            alt=""
+            class="hamburger"
+            id="open"
+            onclick="openNav"
+          />
+          <img
+            src="images/icon-close.svg"
+            alt=""
+            class="close"
+            id="close"
+            onclick="closeNav"
+          />
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav close" id="nav">
           <ul>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Product</a></li>
