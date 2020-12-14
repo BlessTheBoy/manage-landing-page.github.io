@@ -99,6 +99,30 @@ ul {
   display: block;
 }
 
+.top {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.top::before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: calc(100% + 20vh);
+  margin-right: -10%;
+  margin-top: -20vh;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
 .top .header {
   width: 100%;
   max-width: 1200px;
@@ -199,6 +223,25 @@ ul {
   cursor: pointer;
   box-shadow: 1px 10px 10px 0px rgba(242, 95, 58, 0.4);
   padding: 0.65rem 2rem;
+}
+
+.bottom {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bottom::before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: -10%;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
 }
 
 .bottom .features {
@@ -516,6 +559,13 @@ ul {
   .top {
     padding-bottom: 3rem;
   }
+  .top::before {
+    width: 110%;
+    height: calc(100% + 5vh);
+    margin-right: -10%;
+    margin-left: 15%;
+    margin-top: -5vh;
+  }
   .top .header {
     padding: 1.5rem;
   }
@@ -580,6 +630,13 @@ ul {
     width: 100%;
     padding: 0 1.5rem;
     margin: 0.8rem 0 1.2rem;
+  }
+  .bottom {
+    width: 100%;
+    overflow: hidden;
+  }
+  .bottom::before {
+    background-image: none;
   }
   .bottom .features {
     padding: 0.5rem 1.5rem 2rem;
